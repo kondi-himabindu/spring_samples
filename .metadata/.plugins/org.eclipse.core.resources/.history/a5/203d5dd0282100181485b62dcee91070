@@ -1,0 +1,32 @@
+package com.demo.spring;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.demo.spring.dao.Employee;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
+		EmpApp app = (EmpApp)ctx.getBean("app");
+		//String resp = app.registerEmp(200, "James","Hyderbad",65000);
+		app.showAllEmps();
+		
+		List<Employee> emplist = new ArrayList<>();
+		emplist.add(new Employee(100,"James","London",25000));
+		emplist.add(new Employee(101,"Scott","London",35000));
+		emplist.add(new Employee(102,"Kitty","New York",55000));
+		emplist.add(new Employee(103,"Bindu","Bangalore",65000));
+		emplist.add(new Employee(104,"Krishna","Mumbai",55000));
+		emplist.add(new Employee(105,"Amit","Delhi",45000));
+		emplist.add(new Employee(106,"Arun","London",75000));
+		emplist.add(new Employee(107,"Kiran","London",65000));
+	}
+
+}

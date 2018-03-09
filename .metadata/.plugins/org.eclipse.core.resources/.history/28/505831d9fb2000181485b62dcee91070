@@ -1,0 +1,12 @@
+package com.demmo.spring;
+
+public class MyLogger {
+
+	public void logBefore(){
+		System.out.println("Before method cal");
+	}
+	
+	public void logAfter(){
+		System.out.println("After method cal");
+	}
+}

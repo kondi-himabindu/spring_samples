@@ -1,0 +1,21 @@
+package com.demmo.spring;
+
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class MyLogger {
+
+	@Before("* com.demmo.spring.EmpApp.registerEmp(..)")
+	public void logBefore(){
+		System.out.println("Before method cal....");
+	}
+	
+	@AfterReturning("* com.demmo.spring.EmpApp.registerEmp(..)")
+	public void logAfter(){
+		System.out.println("After method cal...");
+	}
+}

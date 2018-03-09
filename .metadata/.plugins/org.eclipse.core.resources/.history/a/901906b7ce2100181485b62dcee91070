@@ -1,0 +1,19 @@
+package com.demo.spring.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller
+public class TestController {
+
+	@RequestMapping(path="/demo", method=RequestMethod.GET)
+	public String getWelcomePage(){
+		return "/WEB-INF/pages/welcome.jsp";
+	}
+	
+	@RequestMapping(path="/test", method=RequestMethod.GET)
+	public String getWelcomePage2(){
+		return "/WEB-INF/pages/welcome2.jsp";
+	}
+}

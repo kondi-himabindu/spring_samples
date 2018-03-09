@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+<bean id="msg" class="com.demmo.spring.Message">
+<constructor-arg value="test mail" index="0"></constructor-arg>
+<constructor-arg value="This is a test message" index="1"></constructor-arg>
+</bean>
+<bean id="mail" class="com.demmo.spring.Mail">
+<property name="toAddress" value="all"></property>
+<property name="fromAddress" value="manager"></property>
+<property name="message" ref="msg"/>
+</bean>
+
+</beans>

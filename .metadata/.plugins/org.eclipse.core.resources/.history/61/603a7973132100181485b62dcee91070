@@ -1,0 +1,20 @@
+package com.demo.spring.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service("app")
+public class EmpApp {
+
+	
+	@Autowired
+	Dao dao;
+
+public String registerEmp(int id,String name,String city, double sal){
+	
+	 String response = dao.save(new Employee(id, name,city,sal));
+     if(response.equals("success"))
+	 return "Employee rEgistered from EmpApp";
+     return "Employee could not be registered";
+}
+}

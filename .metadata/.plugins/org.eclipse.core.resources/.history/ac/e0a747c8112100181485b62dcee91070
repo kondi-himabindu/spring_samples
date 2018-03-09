@@ -1,0 +1,24 @@
+package com.demo.spring.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
+@Service("app")
+public class EmpApp {
+	@Autowired
+	@Qualifier("hibernateDAO")
+	DAO dao;
+	
+	@Autowired
+	@Qualifier("jdbcDaoImpl")
+	DAO dao1;
+
+public String registerEmp(int id,String name,String city, double sal){
+	
+	String s = dao.saveEmp(new Employee(id, name,city,sal));
+	System.out.println(s);
+	String s1 = dao1.saveEmp(new Employee(id,name,city,sal) );
+	return "Employee rEgistered";
+}
+}

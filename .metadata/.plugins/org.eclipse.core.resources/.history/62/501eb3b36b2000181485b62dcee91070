@@ -1,0 +1,20 @@
+package com.demmo.spring;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
+@Service
+public class EmpApp {
+	@Autowired
+	@Qualifier("Hibernate")
+	DAO dao;
+	
+
+public String registerEmp(int id,String name,String city, double sal){
+	
+	String s = dao.saveEmp(new Employee(id, name,city,sal));
+	System.out.println(s);
+	return "Employee rEgistered";
+}
+}

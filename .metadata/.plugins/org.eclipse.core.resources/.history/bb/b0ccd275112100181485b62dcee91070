@@ -1,0 +1,6 @@
+package com.demo.spring.dao;
+
+public interface Dao {
+
+	public String save(Employee e);
+}

@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Thu Mar 08 13:24:41 IST 2018
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\verizon\\.m2\\repository\\org\\springframework\\spring-web\\4.3.7.RELEASE\\spring-web-4.3.7.RELEASE.jar=C\:\\Spring Boot\\sts-bundle\\pivotal-tc-server-developer-3.2.2.RELEASE\\base-instance\\wtpwebapps\\spring-mvc-rest-1\\WEB-INF\\lib\\spring-web-4.3.7.RELEASE.jar
+org.eclipse.jst.jee.server\:spring-mvc-rest-1=C\:\\Spring Boot\\sts-bundle\\pivotal-tc-server-developer-3.2.2.RELEASE\\base-instance\\wtpwebapps\\spring-mvc-rest-1

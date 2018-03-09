@@ -1,0 +1,10 @@
+package com.demmo.spring.dao.impl;
+
+public class JdbcDaoImpl implements Dao{
+	
+	@Overrde
+	public String saveEmp(Employee e){
+		return "JDBC :saved";
+	}
+
+}

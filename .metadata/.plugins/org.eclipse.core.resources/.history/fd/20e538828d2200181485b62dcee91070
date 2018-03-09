@@ -1,0 +1,11 @@
+package com.demo.spring;
+
+@SpringBootApplication
+public class LoginApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    SpringApplication.run(LoginApp.class,args);
+	}
+
+}

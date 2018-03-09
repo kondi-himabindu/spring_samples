@@ -1,0 +1,15 @@
+package clients;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.UriComponentsBuilder;
+
+public class GetClient {
+
+	public static void main(String[] args){
+	RestTemplate template = new RestTemplate();
+	UriComponentsBuilder uribuilder = UriComponentsBuilder.fromHttpUrl("").path("emp");
+	ResponseEntity<String> resp = template.getForEntity(uribuilder.toString(),String.class);
+	System.out.println(resp.getBody());
+	}
+}

@@ -1,0 +1,12 @@
+package com.demmo.spring;
+
+public class EmpApp {
+DAO dao;
+public void setDao(DAO dao) {
+	this.dao = dao;
+}
+public String registerEmp(int id,String name,String city, double sal){
+	dao.saveEmp(new Employee(id, name,city,sal));
+	return "Employee rEgistered";
+}
+}

@@ -1,0 +1,37 @@
+package com.demo.spring.dao;
+
+import java.util.List;
+
+public class JPADaoImpl implements Dao {
+
+	@Override
+	public String save(Employee e) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteEmp(int empId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> listAllEmps() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee findEmpById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String saveList(List<Employee> emps) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

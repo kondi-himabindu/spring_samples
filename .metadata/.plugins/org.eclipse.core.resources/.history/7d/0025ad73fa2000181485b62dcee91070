@@ -1,0 +1,17 @@
+package com.demmo.spring;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import com.demmo.spring.dao.impl.Hiberante;
+
+@Configuration
+@ComponentScan(basePackages ="com.demmo.spring")
+public class Config {
+
+	@Bean
+	public DAO hibernateDAO(){
+		return new Hiberante();
+	}
+}
